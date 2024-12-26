@@ -9,7 +9,6 @@ const connectDB = async () => {
         password: process.env.DB_PASSWORD,
         port: process.env.DB_PORT,
     });
-
     try {
         const client = await pool.connect();
         console.log("Connected to DB");
