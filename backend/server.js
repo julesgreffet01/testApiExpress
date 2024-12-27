@@ -8,7 +8,8 @@ const app = express();
 //middleware (permet de traiter les données de la request)
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
-connection();
+
+//toutes les choses dont tu as besoin
 app.use("/post", require("./routes/post.routes"));
 
 //lancer le serve
