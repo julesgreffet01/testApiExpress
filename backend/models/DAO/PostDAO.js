@@ -2,6 +2,7 @@ const connection = require('../../config/bd');
 const Post = require('../BO/Post');
 
 class PostDAO {
+
     static async getAll() {
         const client = await connection();
         try {
