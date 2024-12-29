@@ -63,7 +63,9 @@ class PostController {
 
     static async delete(req, res) {
         try {
+            const { content, author, likes} = req.body;
             const id = req.params.id;
+            const post = new Post(id, content, author, likes);
             const deletePost = await PostDAO.delete(id);
             if (deletePost) {
                 res.status(200).json(deletePost.toJSON());
