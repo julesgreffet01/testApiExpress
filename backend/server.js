@@ -1,5 +1,4 @@
 const express = require('express');
-const connection = require('./config/bd');
 const dotenv = require('dotenv').config();
 const port = 5000;
 
